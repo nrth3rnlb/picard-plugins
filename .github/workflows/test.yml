@@ -25,5 +25,4 @@ jobs:
     - name: Test plugins
       run: |
         python generate.py
-        less ./build/plugins.json
         python -m unittest discover -v
