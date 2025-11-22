@@ -23,4 +23,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install picard
     - name: Test plugins
-      run: python -m unittest discover -v
+      run: |
+        python generate.py
+        less ./build/plugins.json
+        python -m unittest discover -v
